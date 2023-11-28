@@ -30,7 +30,7 @@
     <div class="container-fluid" height="300px" style="background-color: black">
         <img src="../imagens/logo.png" height="50px" width="100px" style="border-radius: 40px;  position: absolute;">
         <nav class="nav nav-pills justify-content-center" style="height: 52px;">
-            <a class="nav-link" href="../home.html">Home</a>
+            <a class="nav-link" href="../index.html">Home</a>
             <a class="nav-link" href="animes.php">Animes</a>
             <a class="nav-link" href="mangas.php">Mangás</a>
             <a class="nav-link" href="../about.html">Sobre</a>
