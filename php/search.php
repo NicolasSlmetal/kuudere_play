@@ -319,5 +319,6 @@
             </div>
         </div>
     </footer>
+    <script type="module" src="../scripts/adjust.js"></script>
 </body>
 </html>

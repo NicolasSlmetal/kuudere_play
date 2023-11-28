@@ -255,5 +255,9 @@
             </div>
         </div>
     </footer>
+    <script type="module" src="../scripts/adjust.js"></script>
+    <script>
+        var type = "content"
+    </script>
 </body>
 </html>
