@@ -1,0 +1,290 @@
+input#search{
+    border-radius: 15px;
+    background-color: black;
+    font-style: normal;
+    color: white;
+    margin:10px
+}
+div#search{
+    background-color: black;
+    border-radius: 12px;
+    height: fit-content;
+}
+div#content{
+    background-color: black;
+    border-radius: 12px;
+}
+img#select{
+    width: 300px;
+    height: 440px;
+}
+img#card{
+    width: 210px; 
+    height: 300px;
+}
+img#card:hover{
+    filter: brightness(25%);
+}
+input#card{
+    font-size: larger;
+}
+p#description{
+    text-align: justify;
+    margin: 50px;
+}
+div#contact-area{
+    padding-left: 60px;
+    margin: 50px;
+}
+img#contact-img{
+    margin-left:50px;
+}
+h1#content-name{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+}
+h2#search-title{
+    margin: 4px;
+    overflow: hidden;
+}
+input#search{
+    margin-right: 10px;
+}
+div#type-div{
+    margin: 10px; 
+    border-radius: 20px; 
+    padding: 20px;
+}
+h2#categories{
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+ul#ul-radio{
+    list-style: none; 
+    overflow: hidden;
+}
+div#categories{
+    margin-left: 10px; 
+    margin-top: 3px; 
+    border-radius: 20px; 
+    padding: 10px;
+}
+ul#categories{
+    list-style: none; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+div#year{
+    margin-left: 10px; 
+    margin-top: 3px; 
+    border-radius: 20px; 
+    padding: 10px;
+}
+h2#search-year-title{
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+ul#year-form{
+    list-style: none; 
+    overflow: hidden; 
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+p#year{
+    margin-left: 50px;
+}
+input#btn-search{
+    margin: 10px;
+}
+h1#anime-content{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    text-align: center;
+}
+ul#anime{
+    list-style: none; 
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+div#card-anime-1{
+    margin: 4px; 
+    border-radius: 12px;
+    width: 212px;
+    cursor:pointer;
+}
+div#card-body-anime-1{
+    height: 40px;
+}
+p#titleAnime1{
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    margin-bottom: 100px;
+    padding-bottom: 30px;
+}
+p#titleAnime1:hover{
+    overflow: visible;
+    font-size: smaller;
+}
+div#card-anime-2{
+    margin: 4px; 
+    border-radius: 12px; 
+    width: 212px;
+    cursor:pointer;
+}
+div#card-body-anime-2{
+    height: 40px;
+}
+p#titleAnime2{
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    margin-bottom: 100px;
+    padding-bottom: 30px;
+}
+p#titleAnime2:hover{
+    overflow: visible;
+    font-size: smaller;
+}
+div#card-anime-3{
+    margin: 4px; 
+    border-radius: 12px;
+    width: 212px;
+    cursor:pointer;
+}
+div#card-body-anime-3{
+    height: 40px;
+}
+p#titleAnime3{
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    margin-bottom: 100px;
+    padding-bottom: 30px;
+}
+p#titleAnime3:hover{
+    overflow: visible;
+    font-size: smaller;
+}
+div#button{
+    margin: 4px; 
+    border-radius: 12px; 
+    cursor:pointer; 
+    background-color: black;
+}
+div#card-button{
+    width:150px ;
+    height: 340px;
+}
+button#card{
+    width:120px; 
+    height: 310px;
+}
+button#card:hover{
+     filter: brightness(25%);
+}
+h1#manga-content{
+    margin:4px;  
+    overflow: hidden; 
+    text-align: center;
+}
+ul#manga{
+    list-style: none; 
+    overflow: hidden;
+}
+div#card-manga-1{
+    margin: 4px; 
+    border-radius: 12px;
+    width: 212px; 
+    cursor:pointer; 
+}
+div#card-body-manga-1{
+    height: 40px;
+}
+p#titleManga1{
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    margin-bottom: 100px;
+}
+p#titleManga1:hover{
+    font-size: smaller;
+}
+div#card-manga-2{
+    margin: 4px; 
+    border-radius: 12px;
+    width: 212px; 
+    cursor:pointer; 
+}
+div#card-body-manga-2{
+    height: 40px;
+}
+p#titleManga2{
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    margin-bottom: 100px;
+}
+p#titleManga2:hover{
+    font-size: smaller;
+}
+div#card-manga-3{
+    margin: 4px; 
+    border-radius: 12px;
+    width: 212px; 
+    cursor:pointer; 
+}
+div#card-body-manga-3{
+    height: 40px;
+}
+p#titleManga3{
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    margin-bottom: 100px;
+}
+p#titleManga3:hover{
+    font-size: smaller;
+}
+footer{
+    background-color: black;
+}
+
+img#contact-1{
+    width:50px;
+    height:50px;
+}
+img#contact-2{
+    width:50px;
+    height:50px;
+}
+div#thanks{
+    background-color: black; 
+    border-radius:12px
+}
+a#thanks{
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(6, 110, 247)  ;
+    border-color:rgb(6, 110, 247)  ;
+    text-decoration: white;
+}
+input#form{
+    border-radius:12px;
+}
+input#btn{
+    border-radius: 12px;
+    margin-top:15px;
+    margin-bottom:15px;
+}
+table#select{
+    overflow-x:scroll;
+}
+a#user{
+    margin:10px;
+}
