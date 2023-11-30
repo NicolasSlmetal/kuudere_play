@@ -38,6 +38,7 @@
         }
         $manga = $service->delete($manga);
         if ($manga === null){
+            //Não foi posível deletar
             header("Location: ../index.html?deleted=false");
             exit;
         }

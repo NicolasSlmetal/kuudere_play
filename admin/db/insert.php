@@ -16,14 +16,16 @@
         }
         $producer = new Producer($producer); 
         $file_content = file_get_contents("../../categories.txt");
+        //Separando conteúdo de categories.txt por linha
         $string_strip = explode("\n", str_replace("\r","", $file_content));
         $categories = [];
         foreach ($string_strip as $string){
+            //Separando por '='
             $line = explode("=", $string);
             $index = trim($line[1]);
-            
             if (isset($_POST[$index])){
                 if ($_POST[$index] == "on"){
+                    //A categoria atual 'index' foi selecionada
                     $categories[] = $line[1];
                 }
             }
@@ -85,8 +87,8 @@
                 header("Location: ../index.html?insert=true");
                 exit;
             } else{
-                //header("Location: ../index.html?insert=false");
-                //exit;
+                header("Location: ../index.html?insert=false");
+                exit;
             }
         }
 ?>

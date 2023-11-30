@@ -14,7 +14,12 @@
             header("Location: ../index.html?error=0");
             exit;
         }
-        $value = $_POST["value"];
+        if (isset($_POST["value"])){
+            $value = $_POST["value"];
+        } else{
+            //Categoria foi selecionada como atualização
+            $value = "";
+        }
         
         if ($value == "" && $field != "cat") {
             header("Location: ../index.html?error=1");
@@ -23,6 +28,7 @@
         switch ($field) {
             case "cat":
                 $file_content = file_get_contents("../../categories.txt");
+                //Separando conteúdo de categories.txt por linha
                 $string_strip = explode("\n", str_replace("\r","", $file_content));
                 $categories = [];
                 foreach ($string_strip as $string){
