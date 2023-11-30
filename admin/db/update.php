@@ -56,7 +56,7 @@
                     header("Location: ../index.html?error=4");
                     exit;
                 }
-                $anime->setEpisodes($value);
+                $anime->setEps($value);
                 break;
             case "img":
                 if (!str_starts_with($value, "http")){

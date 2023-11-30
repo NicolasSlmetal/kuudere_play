@@ -8,5 +8,6 @@
     }
     $message = "Nome: $name\nEmail:$email\nSugestão:$suggest";
     mail("limabritopro@gmail.com", "Sugestão", $message);
-    //header("Location: thanks.html");
+    //Não faz nada por enquanto, é necessário configurar um servidor de email
+    header("Location: ../thanks.html");
 ?>

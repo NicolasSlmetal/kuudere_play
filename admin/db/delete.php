@@ -10,6 +10,7 @@
         $service = new AnimeService();
         $anime = $service->getRepository()->operation("findbyid",$id);
         if ($anime === null){
+            //ID inexistente
             header("Location: ../index.html?error=0");
             exit;
         }
@@ -20,6 +21,7 @@
         }
         $anime = $service->delete($anime);
         if ($anime === null){
+            //Não foi posível deletar
             header("Location: ../index.html?deleted=false");
             exit;
         }
@@ -28,6 +30,7 @@
         $service = new MangaService();
         $manga = $service->getRepository()->operation("findbyid", $id);
         if ($manga === null){
+            //ID inexistente
             header("Location: ../index.html?error=0");
             exit;
         } 

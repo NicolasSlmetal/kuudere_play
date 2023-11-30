@@ -6,10 +6,10 @@
         $service = new EpisodeService();
         $episode = $service->getRepository()->operation("findbyid", $id);
         if ($service->delete($episode) == null){
-            header("Location: ../../home.html?deleted=false");
+            header("Location: ../../index.html?deleted=false");
             exit;
         } else {
-            header("Location: ../../home.html?deleted=true");
+            header("Location: ../../index.html?deleted=true");
             exit;
         }
     } else {

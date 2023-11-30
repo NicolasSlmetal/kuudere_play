@@ -186,7 +186,8 @@
             $categories = serialize($anime->getCategories());
             $url = serialize($anime->getURL());
             $date = $anime->getDate();
-            $date = $date->format("d/m/Y");
+            //Se a data existe
+            if ($date != null) $date = $date->format("d/m/Y");
             $query = "UPDATE `anime_table` SET `name`=?, 
             `eps`=?, `producer`=?, `categories`=? ,
             `url`=?, `date`=? WHERE `id`=?";
@@ -342,6 +343,7 @@
             $categories = serialize($manga->getCategories());
             $url = serialize($manga->getURL());
             $date = $manga->getDate();
+            if ($date != null) $date = $date->format("d/m/Y");
             $query = "UPDATE `manga_table` SET `name`=?, 
             `eps`=?, `producer`=?, `categories`=? ,
             `url`=?, `date`=? WHERE `id`=?";
