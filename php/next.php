@@ -1,7 +1,7 @@
 <?php
     $type = $_POST["type"];
     $page = $_POST["page"];
-    $html = file_get_contents("../home.html");
+    $html = file_get_contents("../index.html");
     $url_actual1 = "";
     $url_actual2 = "";
     $url_actual3 = "";
@@ -120,7 +120,7 @@
     $html = str_replace($id_actual2, $id2, $html);
     $html = str_replace($id_actual3, $id3, $html);
     $html = str_replace($page_actual, $page, $html);
-    file_put_contents("../home.html", $html);
-    header("Location: ../home.html#$type");
+    file_put_contents("../index.html", $html);
+    header("Location: ../index.html#$type");
     exit;
 ?>
