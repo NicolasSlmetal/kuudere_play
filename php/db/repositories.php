@@ -6,7 +6,7 @@
         private $connection;
 
         public function __construct(){
-            $this->driver = new Driver("monorail.proxy.rlwy.net:57822/railway", "railway", "root", "3de5e6b6b2Cc5bfCbHgF-2DG354A4GBa");
+            $this->driver = new Driver("localhost:3000", "kuudere", "root", "password");
             $this->connection = $this->getDriver()->connect();
         }
 

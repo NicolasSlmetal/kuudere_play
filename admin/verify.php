@@ -5,7 +5,7 @@
         $pass = $_POST["pass"];
         $hash_user = md5($user);
         $hash_pass = sha1($pass);
-        $driver = new Driver("monorail.proxy.rlwy.net:57822/railway", "railway", "root", "3de5e6b6b2Cc5bfCbHgF-2DG354A4GBa");;
+        $driver = new Driver("localhost:3000", "kuudere", "root", "password");;
         $con = $driver->connect();
         $verify = false;
         echo "$hash_pass";
