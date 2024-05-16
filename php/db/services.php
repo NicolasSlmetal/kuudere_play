@@ -46,7 +46,7 @@
             $animes_by_year = [];
             foreach ($animes as $index => $anime){
                 if ($anime->getDate() != null){
-                    $date = DateTime::createFromFormat("d/m/Y", $anime->getDate());
+                    $date = $anime->getDate();
                     $anime_year = $date->format("Y");
                     if ($anime_year == $year){
                         $animes_by_year[] = $anime;
@@ -133,7 +133,7 @@
             $mangas_by_year = [];
             foreach ($mangas as $index => $manga){
                 if ($manga->getDate() != null){
-                    $date = DateTime::createFromFormat("d/m/Y", $manga->getDate());
+                    $date = $manga->getDate();
                     $year_manga = $date->format("Y");
                     if ($year_manga == $year){
                         $mangas_by_year[] = $manga;
