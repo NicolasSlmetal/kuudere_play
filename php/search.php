@@ -1,12 +1,14 @@
 <?php   
     $type = $_POST["type"];
     $categories = [];
+    $categories_names = [];
     $str_categories = file_get_contents("../categories.txt");
     $str_split = explode("\n", $str_categories);
     foreach ($str_split as $index => $line){
         $line_split = explode("=", $line);
         $key = trim($line_split[1]);
-        if (isset($_POST[$key])) $categories[] = $key;
+        $value = trim($line_split[0]);
+        if (isset($_POST[$key])) {$categories[] = $key; $categories_names[] = $value;}
     }
     
 ?>
@@ -24,7 +26,7 @@
     <div class="container-fluid" height="300px" style="background-color: black;">
         <img src="../imagens/logo.png" height="50px" width="100px" style="border-radius: 40px;  position: absolute;">
         <nav class="nav nav-pills justify-content-center" style="height: 52px;">
-            <a class="nav-link" href="../index.html">Home</a>
+            <a class="nav-link" href="../home.html">Home</a>
             <a class="nav-link" href="animes.php">Animes</a>
             <a class="nav-link" href="mangas.php">Mangás</a>
             <a class="nav-link" href="../about.html">Sobre</a>
@@ -173,17 +175,23 @@
                         $objects = "";
                         $service = "";
                         $results = [];
+                        $label = "Pesquisa de";
                         if ($type == "anime"){
                             $service = new AnimeService();
+                            $label = $label . " animes";
                         } else{
                             $service = new MangaService();
+                            $label = $label . " mangás";
                         }
+                        
                         if (isset($_POST["time"])){
                             $year = $_POST["year"];
                             $time = $_POST["time"];
                             if ($time == "exact"){
+                                $label = $label . ", no ano de $year";
                                 $results = $service->findByYear($year);
                             }elseif ($time == "from"){
+                                $label = $label . ", a partir de $year";
                                 $year_actual = date("Y");
                                 while ($year <= $year_actual){
                                     $objects_by_year = $service->findByYear($year);
@@ -197,23 +205,29 @@
                             $results = $service->getRepository()->operation("findall");
                         }
                         if (sizeof($categories) > 0){
-                            $copy_results = [];
-                            for ($i = 0; $i < sizeof($results); $i++) $copy_results[] = $results[$i];
-                            foreach ($copy_results as $index => $object){
-                                $category_found = false;
-                                foreach ($object->getCategories() as $index => $category){
+                            $label = $label . ", nas categorias: ";
+                            foreach ($categories_names as $cat) $label = $label . "$cat...";
+
+                            $len_cat = sizeof($categories);
+                            $filtered_results = [];
+                            foreach ($results as $index => $object){
+                                $object_categories = $object->getCategories();
+                                $category_found = 0;
+                                foreach ($object_categories as $index => $category){
                                     if (in_array($category, $categories)){
-                                        $category_found = true; 
+                                        $category_found++;
+                                        if ($category_found >= $len_cat) {
+                                            $filtered_results[] = $object;
+                                            break;
+                                        }       
                                     }
                                 }
-                                if (!$category_found){
-                                    $index_object = array_search($object, $results);
-                                    unset($results[$index_object]);
-                                }
                             }
+                            $results = $filtered_results;
                         }
                         if (strlen($name) > 0){
                             $copy_results = [];
+                            $label = $label . ", com o nome '$name'";
                             for ($i = 0; $i < sizeof($results); $i++) $copy_results[] = $results[$i];
                             foreach ($copy_results as $index => $object){
                                 $contains_name = strpos(strtoupper($object->getName()), strtoupper($name));
@@ -226,6 +240,7 @@
                         usort($results, function($object1, $object2){
                             return strcmp($object1->getName(), $object2->getName());
                         });
+                        echo "<p align='center'>$label</p>";
                         $total = sizeof($results);
                         if ($total > 0){
                             $i = 0;
@@ -233,8 +248,7 @@
                                 echo "<div class='row'>";
                                 echo "<div class='col-12'>";
                                 echo "<ul class='list-group list-group-horizontal' style='list-style: none; overflow: hidden;'>";
-                                if ($total - $i > 4){
-                                    for ($j = $i; $j < $i + 4; $j++){
+                                for ($j = $i; $j < $i + 4 && $j < $total; $j++){
                                         $name = $results[$j]->getName();
                                         $id = $results[$j]->getID();
                                         $img = $results[$j]->getURL()[0];
@@ -242,7 +256,8 @@
                                         $name_form = "select" . $n;
                                         echo "<li>
                                                 <form id='$name_form' method='POST' action='select.php'>
-                                                <div class='card bg-dark text-center' style='margin: 4px; margin-left:10px; border-radius:12px; cursor:pointer;' onclick=document.querySelector('form#$name_form').submit()>
+                                                <div class='card bg-dark text-center' style='margin: 4px; margin-left:10px; border-radius:12px; cursor:pointer;' onclick=document.querySelector('form#$name_form').submit()
+                                                data-bs-toggle='tooltip' title='$name'>
                                                     <input type='hidden' name='id' value='$id'>
                                                     <input type='hidden' name='type' value='$type'>
                                                     <img class='card-img-top ' id='card' src='$img' style='width:170px;height:240px;'>
@@ -252,32 +267,8 @@
                                                 </div>
                                                 </form>
                                             </li>";
-                                    }
-                                    $i+=4;
-                                } elseif ($total - $i <= 4){
-                                    $count = 0;
-                                    for ($j = $i; $j < $total; $j++){
-                                        $name = $results[$j]->getName();
-                                        $id = $results[$j]->getID();
-                                        $img = $results[$j]->getURL()[0];
-                                        $n = $j + 1;
-                                        $name_form = "select" . $n;
-                                        echo "<li>
-                                                <form id='$name_form' method='POST' action='select.php'>
-                                                <div class='card bg-dark text-center' style='margin: 4px; margin-left:10px; border-radius:12px; cursor:pointer;' onclick=document.querySelector('form#$name_form').submit()>
-                                                    <input type='hidden' name='id' value='$id'>
-                                                    <input type='hidden' name='type' value='$type'>
-                                                    <img class='card-img-top ' id='card' src='$img' style='width:170px;height:240px;'>
-                                                    <div class='card-body' style='height:40px; width:170px;'>
-                                                        <p class='text-white' id='title' style='white-space:nowrap; overflow:hidden; text-overflow: ellipsis;'>$name</p>
-                                                    </div>
-                                                </div>
-                                                </form>
-                                            </li>";
-                                        $count++;
-                                    }
-                                    $i += $count;
                                 }
+                                $i+= 4;
                                 echo "</ul>";
                                 echo "</div>";
                                 echo "</div>";
@@ -319,6 +310,7 @@
             </div>
         </div>
     </footer>
-    <script type="module" src="../scripts/adjust.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/js/bootstrap.min.js"></script>
 </body>
 </html>
