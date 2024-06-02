@@ -30,7 +30,7 @@
     <div class="container-fluid" height="300px" style="background-color: black">
         <img src="../imagens/logo.png" height="50px" width="100px" style="border-radius: 40px;  position: absolute;">
         <nav class="nav nav-pills justify-content-center" style="height: 52px;">
-            <a class="nav-link" href="../index.html">Home</a>
+            <a class="nav-link" href="../home.html">Home</a>
             <a class="nav-link" href="animes.php">Animes</a>
             <a class="nav-link" href="mangas.php">Mangás</a>
             <a class="nav-link" href="../about.html">Sobre</a>
@@ -112,7 +112,7 @@
                                         $name_form = "select" . $n;
                                         echo "<li>";
                                         echo "<form id='$name_form' method='POST' action='view.php'>";
-                                        echo"<div class='card bg-dark' style='margin: 4px; margin-left:10px; border-radius:12px; cursor:pointer;' onclick=document.querySelector('form#$name_form').submit()>";
+                                        echo"<div class='card bg-dark' style='margin: 4px; margin-left:10px; border-radius:12px; cursor:pointer;' onclick=document.querySelector('form#$name_form').submit() data-bs-toggle='tooltip' title='$name'>";
                                         echo "<input type='hidden' name='id' value='$id'>";
                                         echo "<input type='hidden' name='type' value='$type'>";
                                         echo "<img class='card-img-top ' id='card' src='$img' style='width:240px;height:210px;'>";
