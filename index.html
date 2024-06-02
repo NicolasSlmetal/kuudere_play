@@ -203,36 +203,36 @@
                         <ul id="anime" class="list-group list-group-horizontal">
                             <li>
                                 <form id="select1" method="POST" action="php/select.php">
-                                    <div class="card bg-dark text-center" id="card-anime-1" onclick="document.querySelector('form#select1').submit()">
-                                        <input id="idAnime1" type="hidden" name="id" value="2">
+                                    <div class="card bg-dark text-center" id="card-anime-1"  data-bs-toggle="tooltip" title="Hunter X Hunter" onclick="document.querySelector('form#select1').submit()">
+                                        <input id="idAnime1" type="hidden" name="id" value="5">
                                         <input type="hidden" name="type" value="anime">
-                                        <img  class="card-img-top" id="card" src="https://lh3.googleusercontent.com/d/128MNvhzJFCZqqPPA-6mZgp766690dzHu">
+                                        <img  class="card-img-top" id="card" src="https://lh3.googleusercontent.com/d/1MWcgEM-U663BF0YDzC5xXfcvPTpmI--q">
                                         <div class="card-body" id="card-body-anime-1">
-                                            <p class="text-white" id="titleAnime1">Kill La Kill</p>
+                                            <p class="text-white" id="titleAnime1">Hunter X Hunter</p>
                                         </div>
                                     </div>
                                 </form>
                             </li>
                             <li>
                                 <form id="select2" method="POST" action="php/select.php">
-                                    <div class="card bg-dark text-center" id="card-anime-2" onclick="document.querySelector('form#select2').submit()">
-                                        <input id="idAnime2" type="hidden" name="id" value="3">
+                                    <div class="card bg-dark text-center" id="card-anime-2" data-bs-toggle="tooltip" title="One Piece" onclick="document.querySelector('form#select2').submit()">
+                                        <input id="idAnime2" type="hidden" name="id" value="1">
                                         <input type="hidden" name="type" value="anime">
-                                        <img  class="card-img-top" id="card" src="https://lh3.googleusercontent.com/d/1VXMMzg5rmMFVvehesjgYSET8_MOJbMKn">
+                                        <img  class="card-img-top" id="card" src="https://lh3.googleusercontent.com/d/1XlIF18J9e0zp-kMrqM9pJvjxXDhZk25g">
                                         <div class="card-body" id="card-body-anime-2">
-                                            <p class="text-white" id="titleAnime2">Chainsaw Man</p>
+                                            <p class="text-white" id="titleAnime2">One Piece</p>
                                         </div>
                                     </div>
                                 </form>
                             </li>
                             <li>
                                 <form id="select3" method="POST" action="php/select.php">
-                                    <div class="card bg-dark text-center" id="card-anime-3"  onclick="document.querySelector('form#select3').submit()">
-                                        <input id="idAnime3" type="hidden" name="id" value="4">
+                                    <div class="card bg-dark text-center" id="card-anime-3"  data-bs-toggle="tooltip" title="Jojo's Bizarre Adventures" onclick="document.querySelector('form#select3').submit()">
+                                        <input id="idAnime3" type="hidden" name="id" value="6">
                                         <input type="hidden" name="type" value="anime">
-                                        <img  class="card-img-top" id="card" src="https://lh3.googleusercontent.com/d/1fqe3oF3q32oU9Sog0w3NCQPwfBg6p2e4">
+                                        <img  class="card-img-top" id="card" src="https://lh3.googleusercontent.com/d/1D2_Mm_TRN5rlA5C_Mo1VKpCdZvzhXgcO">
                                         <div class="card-body" id="card-body-anime-3">
-                                            <p class="text-white" id="titleAnime3">Suzumiya Haruhi No Yuutsu</p>
+                                            <p class="text-white" id="titleAnime3">Jojo's Bizarre Adventures</p>
                                         </div>
                                     </div>
                                 </form>
@@ -242,7 +242,7 @@
                                     <div class="button" onclick="document.querySelector('form#nextAnime').submit()">
                                         <div class="card-body" id="card-button">
                                                 <input type="hidden" name="type" value="anime">
-                                                <input id="nextPageAnime" type="hidden" name="page" value="1">
+                                                <input id="nextPageAnime" type="hidden" name="page" value="2">
                                                 <button type="submit" id="card"><h1>></h1></button>
                                         </div>
                                     </div>
@@ -253,7 +253,7 @@
                         <ul id="manga" class="list-group list-group-horizontal" style="list-style: none; overflow: hidden;">
                             <li>
                                 <form id="select4" method="POST" action="php/select.php">
-                                    <div class="card bg-dark text-center" id="card-manga-1" onclick="document.querySelector('form#select4').submit()">
+                                    <div class="card bg-dark text-center" id="card-manga-1" data-bs-toggle="tooltip" title="Mangá - One Piece" onclick="document.querySelector('form#select4').submit()">
                                         <input id="idManga1" type="hidden" name="id" value="1">
                                         <input type="hidden" name="type" value="manga">
                                         <img  class="card-img-top" id="card" src="https://lh3.googleusercontent.com/d/1DhrgILgsg91uVc8s4hWz2lLS_V7qlxwO">
@@ -265,7 +265,7 @@
                             </li>
                             <li>
                                 <form id="select5" method="POST" action="php/select.php">
-                                    <div class="card bg-dark text-center" id="card-manga-2" onclick="document.querySelector('form#select5').submit()">
+                                    <div class="card bg-dark text-center" id="card-manga-2" data-bs-toggle="tooltip" title="One Punch Man" onclick="document.querySelector('form#select5').submit()">
                                         <input id="idManga2" type="hidden" name="id" value="2">
                                         <input type="hidden" name="type" value="manga">
                                         <img  class="card-img-top" id="card" src="https://lh3.googleusercontent.com/d/1Y1klRwQLR9RKNmP-THsxagnmkarfAfzT">
@@ -277,7 +277,8 @@
                             </li>
                             <li>
                                 <form id="select6" method="POST" action="php/select.php">
-                                    <div class="card bg-dark text-center" id="card-manga-3" style="margin: 4px; border-radius: 12px; cursor:pointer;" onclick="document.querySelector('form#select6').submit()">
+                                    <div class="card bg-dark text-center" id="card-manga-3" data-bs-toggle="tooltip" title="Mangá - Hunter X Hunter" style="margin: 4px; border-radius: 12px; cursor:pointer;" onclick="document.querySelector('form#select6').submit()">
+                                        <span>
                                         <input id="idManga3" type="hidden" name="id" value="3">
                                         <input type="hidden" name="type" value="manga">
                                         <img  class="card-img-top" id="card" src="https://lh3.googleusercontent.com/d/1xLiRzFddo4GiGjMK6oUaiPn8vA_Qrwug" style="width: 210px; height: 300px;">
@@ -334,6 +335,9 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script type="module" src="scripts/adjust.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/js/bootstrap.min.js"></script>
+
     <script>
         var type = "index"
     </script>

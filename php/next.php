@@ -1,7 +1,7 @@
 <?php
     $type = $_POST["type"];
     $page = $_POST["page"];
-    $html = file_get_contents("../home.html");
+    $html = file_get_contents("../index.html");
     $url_actual1 = "";
     $url_actual2 = "";
     $url_actual3 = "";
@@ -14,6 +14,12 @@
     $name1 = "";
     $name2 = "";
     $name3 = "";
+    $tooltip1 = "";
+    $tooltip2 = "";
+    $tooltip3 = "";
+    $tooltip_actual1 = "";
+    $tooltip_actual2 = "";
+    $tooltip_actual3 = "";
     $id_actual1 = "";
     $id_actual2 = "";
     $id_actual3 = "";
@@ -28,18 +34,24 @@
             $name1 = "id=\"titleAnime1\">Hunter X Hunter";
             $id_actual1 = "<input id=\"idAnime1\" type=\"hidden\" name=\"id\" value=\"2\">";
             $id1 = "<input id=\"idAnime1\" type=\"hidden\" name=\"id\" value=\"5\">";
+            $tooltip_actual1 = "title=\"Kill La Kill\"";
+            $tooltip1 = "title=\"Hunter X Hunter\"";
             $url_actual2 = "https://lh3.googleusercontent.com/d/1VXMMzg5rmMFVvehesjgYSET8_MOJbMKn";
             $url2 = "https://lh3.googleusercontent.com/d/1XlIF18J9e0zp-kMrqM9pJvjxXDhZk25g";
             $name_actual2 = "id=\"titleAnime2\">Chainsaw Man";
             $name2 = "id=\"titleAnime2\">One Piece";
             $id_actual2 = "<input id=\"idAnime2\" type=\"hidden\" name=\"id\" value=\"3\">";
             $id2 = "<input id=\"idAnime2\" type=\"hidden\" name=\"id\" value=\"1\">";
+            $tooltip_actual2 = "title=\"Chainsaw Man\"";
+            $tooltip2 = "title=\"One Piece\"";
             $url_actual3 = "https://lh3.googleusercontent.com/d/1fqe3oF3q32oU9Sog0w3NCQPwfBg6p2e4";
             $url3 = "https://lh3.googleusercontent.com/d/1D2_Mm_TRN5rlA5C_Mo1VKpCdZvzhXgcO";
             $name_actual3 = "id=\"titleAnime3\">Suzumiya Haruhi No Yuutsu";
             $name3 = "id=\"titleAnime3\">Jojo's Bizarre Adventures";
             $id_actual3 = "<input id=\"idAnime3\" type=\"hidden\" name=\"id\" value=\"4\">";
             $id3 = "<input id=\"idAnime3\" type=\"hidden\" name=\"id\" value=\"6\">";
+            $tooltip_actual3 = "title=\"Suzumiya Haruhi No Yuutsu\"";
+            $tooltip3 = "title=\"Jojo's Bizarre Adventures\"";
             $page_actual = "<input id=\"nextPageAnime\" type=\"hidden\" name=\"page\" value=\"1\">";
             $page = "<input id=\"nextPageAnime\" type=\"hidden\" name=\"page\" value=\"2\">";
         } else {
@@ -49,18 +61,24 @@
             $name1 = "id=\"titleAnime1\">Kill La Kill";
             $id_actual1 = "<input id=\"idAnime1\" type=\"hidden\" name=\"id\" value=\"5\">";
             $id1 = "<input id=\"idAnime1\" type=\"hidden\" name=\"id\" value=\"2\">";
+            $tooltip_actual1 = "title=\"Hunter X Hunter\"";
+            $tooltip1 = "title=\"Kill La Kill\"";
             $url_actual2 = "https://lh3.googleusercontent.com/d/1XlIF18J9e0zp-kMrqM9pJvjxXDhZk25g";
             $url2 = "https://lh3.googleusercontent.com/d/1VXMMzg5rmMFVvehesjgYSET8_MOJbMKn";
             $name_actual2 = "id=\"titleAnime2\">One Piece";
             $name2 = "id=\"titleAnime2\">Chainsaw Man";
             $id_actual2 = "<input id=\"idAnime2\" type=\"hidden\" name=\"id\" value=\"1\">";
             $id2 = "<input id=\"idAnime2\" type=\"hidden\" name=\"id\" value=\"3\">";
+            $tooltip_actual2 = "title=\"One Piece\"";;
+            $tooltip2 = "title=\"Chainsaw Man\"";
             $name_actual3 = "id=\"titleAnime3\">Jojo's Bizarre Adventures";
             $name3 = "id=\"titleAnime3\">Suzumiya Haruhi No Yuutsu";
             $url_actual3 = "https://lh3.googleusercontent.com/d/1D2_Mm_TRN5rlA5C_Mo1VKpCdZvzhXgcO";
             $url3 = "https://lh3.googleusercontent.com/d/1fqe3oF3q32oU9Sog0w3NCQPwfBg6p2e4";
             $id_actual3 = "<input id=\"idAnime3\" type=\"hidden\" name=\"id\" value=\"6\">";
             $id3 = "<input id=\"idAnime3\" type=\"hidden\" name=\"id\" value=\"4\">";
+            $tooltip_actual3 = "title=\"Jojo's Bizarre Adventures\"";
+            $tooltip3 = "title=\"Suzumiya Haruhi No Yuutsu\"";
             $page_actual = "<input id=\"nextPageAnime\" type=\"hidden\" name=\"page\" value=\"2\">";
             $page = "<input id=\"nextPageAnime\" type=\"hidden\" name=\"page\" value=\"1\">";
         }
@@ -72,18 +90,24 @@
             $name1 = "id=\"titleManga1\">Attack On Titan";
             $id_actual1 = "<input id=\"idManga1\" type=\"hidden\" name=\"id\" value=\"1\">";
             $id1 = "<input id=\"idManga1\" type=\"hidden\" name=\"id\" value=\"4\">";
+            $tooltip_actual1 = "title=\"Mangá - One Piece\"";
+            $tooltip1 = "title=\"Attack On Titan\"";
             $url_actual2 = "https://lh3.googleusercontent.com/d/1Y1klRwQLR9RKNmP-THsxagnmkarfAfzT";
             $url2 = "https://lh3.googleusercontent.com/d/1pHSH-1rEFPbY9QN2X1JlG-OJCQZBDq1P";
             $name_actual2 = "id=\"titleManga2\">One Punch Man";
             $name2 = "id=\"titleManga2\">Another";
             $id_actual2 = "<input id=\"idManga2\" type=\"hidden\" name=\"id\" value=\"2\">";
             $id2 = "<input id=\"idManga2\" type=\"hidden\" name=\"id\" value=\"5\">";
+            $tooltip_actual2 = "title=\"One Punch Man\"";
+            $tooltip2 = "title=\"Another\"";
             $url_actual3 = "https://lh3.googleusercontent.com/d/1xLiRzFddo4GiGjMK6oUaiPn8vA_Qrwug";
             $url3 = "https://lh3.googleusercontent.com/d/1KhfvSYD_oXbWwxU4a_AmdeIFp3IbAKqt";
             $name_actual3 = "id=\"titleManga3\">Hunter X Hunter";
             $name3 = "id=\"titleManga3\">Tokyo Ghoul";
             $id_actual3 = "<input id=\"idManga3\" type=\"hidden\" name=\"id\" value=\"3\">";
             $id3 = "<input id=\"idManga3\" type=\"hidden\" name=\"id\" value=\"6\">";
+            $tooltip_actual3 = "title=\"Mangá - Hunter X Hunter\"";
+            $tooltip3 = "title=\"Tokyo Ghoul\"";
             $page_actual = "<input id=\"nextPageManga\" type=\"hidden\" name=\"page\" value=\"1\">";
             $page = "<input id=\"nextPageManga\" type=\"hidden\" name=\"page\" value=\"2\">";
         } else {
@@ -105,6 +129,12 @@
             $name3 = "id=\"titleManga3\">Hunter X Hunter";
             $id_actual3 = "<input id=\"idManga3\" type=\"hidden\" name=\"id\" value=\"6\">";
             $id3 = "<input id=\"idManga3\" type=\"hidden\" name=\"id\" value=\"3\">";
+            $tooltip_actual1 = "title=\"Attack On Titan\"";
+            $tooltip1 = "title=\"Mangá - One Piece\"";
+            $tooltip_actual2 = "title=\"Another\"";
+            $tooltip2 = "title=\"One Punch Man\"";
+            $tooltip_actual3 = "title=\"Tokyo Ghoul\"";
+            $tooltip3 = "title=\"Mangá - Hunter X Hunter\"";
             $page_actual = "<input id=\"nextPageManga\" type=\"hidden\" name=\"page\" value=\"2\">";
             $page = "<input id=\"nextPageManga\" type=\"hidden\" name=\"page\" value=\"1\">";
         }
@@ -119,8 +149,11 @@
     $html = str_replace($id_actual1, $id1, $html);
     $html = str_replace($id_actual2, $id2, $html);
     $html = str_replace($id_actual3, $id3, $html);
+    $html = str_replace($tooltip_actual1, $tooltip1, $html);
+    $html = str_replace($tooltip_actual2, $tooltip2, $html);
+    $html = str_replace($tooltip_actual3, $tooltip3, $html);
     $html = str_replace($page_actual, $page, $html);
-    file_put_contents("../home.html", $html);
-    header("Location: ../home.html#$type");
+    file_put_contents("../index.html", $html);
+    header("Location: ../index.html#$type");
     exit;
 ?>
