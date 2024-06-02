@@ -12,7 +12,7 @@
     <div class="container-fluid" height="300px" style="background-color: black;">
         <img src="../imagens/logo.png" height="50px" width="100px" style="border-radius: 40px;  position: absolute;">
         <nav class="nav nav-pills justify-content-center" style="height: 52px;">
-            <a class="nav-link" href="../index.html">Home</a>
+            <a class="nav-link" href="../home.html">Home</a>
             <a class="nav-link active" aria-current="page" href="#">Animes</a>
             <a class="nav-link" href="mangas.php">Mangás</a>
             <a class="nav-link" href="../about.html">Sobre</a>
@@ -168,8 +168,7 @@
                                 echo "<div class='row'>";
                                 echo "<div class='col-12'>";
                                 echo "<ul class='list-group list-group-horizontal' style='list-style: none; overflow: hidden;'>";
-                                if ($total - $i > 4){
-                                    for ($j = $i; $j < $i + 4; $j++){
+                                for ($j = $i; $j < $i + 4 && $j < $total; $j++){
                                         $name = $animes[$j]->getName();
                                         $id = $animes[$j]->getID();
                                         $img = $animes[$j]->getURL()[0];
@@ -177,7 +176,8 @@
                                         $name_form = "select" . $n;
                                         echo "<li>
                                                 <form id='$name_form' method='POST' action='select.php'>
-                                                <div class='card bg-dark text-center' style='margin: 4px; margin-left:10px; border-radius:12px; cursor:pointer;' onclick=document.querySelector('form#$name_form').submit()>
+                                                <div class='card bg-dark text-center' style='margin: 4px; margin-left:10px; border-radius:12px; cursor:pointer;' onclick=document.querySelector('form#$name_form').submit()
+                                                data-bs-toggle='tooltip' title='$name'>
                                                     <input type='hidden' name='id' value='$id'>
                                                     <input type='hidden' name='type' value='anime'>
                                                     <img class='card-img-top ' id='card' src='$img' style='width:170px;height:240px;'>
@@ -187,32 +187,10 @@
                                                 </div>
                                                 </form>
                                             </li>";
-                                    }
-                                    $i+=4;
-                                } elseif ($total - $i <= 4){
-                                    $count = 0;
-                                    for ($j = $i; $j < $total; $j++){
-                                        $name = $animes[$j]->getName();
-                                        $id = $animes[$j]->getID();
-                                        $img = $animes[$j]->getURL()[0];
-                                        $n = $j + 1;
-                                        $name_form = "select" . $n;
-                                        echo "<li>
-                                                <form id='$name_form' method='POST' action='select.php'>
-                                                <div class='card bg-dark text-center' style='margin: 4px; margin-left:10px; border-radius:12px; cursor:pointer;' onclick=document.querySelector('form#$name_form').submit()>
-                                                    <input type='hidden' name='id' value='$id'>
-                                                    <input type='hidden' name='type' value='anime'>
-                                                    <img class='card-img-top ' id='card' src='$img' style='width:170px;height:240px;'>
-                                                    <div class='card-body' style='height:40px; width:170px;'>
-                                                        <p class='text-white' id='title' style='white-space:nowrap; overflow:hidden; text-overflow: ellipsis;'>$name</p>
-                                                    </div>
-                                                </div>
-                                                </form>
-                                            </li>";
-                                        $count++;
-                                    }
-                                    $i += $count;
-                                }
+                                    
+                                   
+                                } 
+                                $i += 4;
                                 echo "</ul>";
                                 echo "</div>";
                                 echo "</div>";
@@ -255,9 +233,8 @@
             </div>
         </div>
     </footer>
-    <script type="module" src="../scripts/adjust.js"></script>
-    <script>
-        var type = "content"
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>
