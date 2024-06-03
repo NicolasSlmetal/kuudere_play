@@ -26,7 +26,7 @@
     <div class="container-fluid" height="300px" style="background-color: black;">
         <img src="../imagens/logo.png" height="50px" width="100px" style="border-radius: 40px;  position: absolute;">
         <nav class="nav nav-pills justify-content-center" style="height: 52px;">
-            <a class="nav-link" href="../home.html">Home</a>
+            <a class="nav-link" href="../index.html">Home</a>
             <a class="nav-link" href="animes.php">Animes</a>
             <a class="nav-link" href="mangas.php">Mangás</a>
             <a class="nav-link" href="../about.html">Sobre</a>
@@ -37,17 +37,16 @@
         <div class="row">
             <div id="search" class="col-4 w-25" style="height: fit-content; background-color: black">
                 <h2 style="margin: 4px;  overflow: hidden;">Filtro</h2>
-                <form method="POST" action="search.php">
+                <form method="POST" action="search.php" id="search">
                     <?php
                         echo "<input type='hidden' name='type' value='$type'>";
                     ?>
-                    <input class="w-100 bg-dark" id="search" type="text" placeholder="Digite o nome" style="margin-right: 10px" name="name">
-                    <br>
-                    <div class="form-check form-check-inline w-75 bg-dark" style="margin-left: 10px; margin-top: 3px; border-radius: 20px; padding: 10px;">
-                        <h2 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Categorias</h2>
-                        <ul style="list-style: none; overflow: hidden; text-overflow: ellipsis;">
+                    <input class="w-100 bg-dark" name="name" id="search" type="text" placeholder="Digite o nome" name="name">
+                    <div class="form-check form-check-inline w-100 bg-dark" id="categories">
+                        <h2 id="categories">Categorias</h2>
+                        <ul id="categories">
                             <li>
-                                <input class="form-check-input" style="color: black;" type="checkbox" name="shonen">
+                                <input class="form-check-input" type="checkbox" name="shonen" value="on">
                                 <label>Shonen</label>
                                 <br>
                             </li>
@@ -140,28 +139,31 @@
                                 <label>Militar</label>
                             </li>
                         </ul>
+                        <br>
+
                     </div>
                     <br>
-                    <div class="form-check form-check-inline w-100 bg-dark" style=" margin-left: 10px; margin-top: 3px; border-radius: 20px; padding: 10px;">
-                        <h2 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Ano</h2>
-                        <ul style="list-style: none; overflow: hidden; text-overflow: ellipsis;">
-                        <li>
-                            <input  class="form-check-input" type="radio" value="exact" name="time">
-                            <label>No ano exato</label>
-                        </li>
-                        <br>
-                        <li>
-                            <input  class="form-check-input" type="radio" value="from" name="time">
-                            <label>A partir de</label>
-                        </li>
-                        <br>
-                        <li>
-                            <input type="range" min="1999" max="2023" oninput="document.querySelector('p#year').innerText = value" onchange="document.querySelector('p#year').innerText = value" name="year">
-                            <p id="year">Ano</p>
-                        </li>   
+                    <div class="form-check form-check-inline w-100 bg-dark" id="year">
+                        <h2 id="search-year-title">Ano</h2>
+                        <ul id="year-form">
+                            <li>
+                                <input  id="exact" class="form-check-input" type="radio" value="exact" name="time" onclick="setRangeVisible(this)">
+                                <label>No ano exato</label>
+                            </li>
+                            <br>
+                            <li>
+                                <input  id="from" class="form-check-input" type="radio" value="from" name="time" onclick="setRangeVisible(this)">
+                                <label>A partir de</label>
+                            </li>
+                            <br>
+                            <li>
+                                <input id="year" type="range" name="year" min="1960" oninput="document.querySelector('p#year').innerText = value" onchange="document.querySelector('p#year').innerText = value" onload="document.querySelector('p#year').value = value" disabled>
+                                <p id="year">Ano</p>
+                            </li>
                         </ul>
                     </div>
                     <br>
+                    <input type="button" class="btn btn-dark" value="Resetar pesquisa" onclick="resetSearch()" id="btn-search"><br>
                     <input type="submit" class="btn btn-dark text-white" value="Pesquisar" style="margin: 10px;">
                 </form>
             </div>
@@ -312,5 +314,6 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/js/bootstrap.min.js"></script>
+    <script src="../scripts/search.js"></script>
 </body>
 </html>
