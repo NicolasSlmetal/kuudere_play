@@ -6,11 +6,11 @@
     <title>Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style/style.css"/>
-    <link rel="shortcut icon" type="imagex/png" href="./imagens/logo.ico">
+    <link rel="shortcut icon" type="imagex/png" href="./images/logo.ico">
 </head>
 <body class="bg-dark">
     <div class="container-fluid" height="300px" style="background-color: black">
-        <img src="imagens/logo.png" height="50px" width="100px" style="border-radius: 40px;  position: absolute;">
+        <img src="images/logo.png" height="50px" width="100px" style="border-radius: 40px;  position: absolute;">
         <nav class="nav nav-pills justify-content-center" style="height: 52px;">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
             <a class="nav-link" href="php/animes.php">Animes</a>
@@ -26,19 +26,19 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="imagens/c1.jpg" class="d-block w-100" alt="Chainsaw Man" height="500px">
+            <img src="images/c1.jpg" class="d-block w-100" alt="Chainsaw Man" height="500px">
             <div class="carousel-caption d-md-block" style="background-color: black;">
                 <h1 style="color: white;">One Piece</h1>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="imagens/c2.jpg" class="d-block w-100" alt="..." height="500px">
+            <img src="images/c2.jpg" class="d-block w-100" alt="..." height="500px">
             <div class="carousel-caption d-md-block" style="background-color: black;">
                 <h1 style="color: white;">Tokyo Ghoul</h1>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="imagens/c3.jpeg" class="d-block w-100" alt="..." height="500px">
+            <img src="images/c3.jpeg" class="d-block w-100" alt="..." height="500px">
             <div class="carousel-caption d-md-block" style="background-color: black;">
                 <h1 style="color: white;">Hunter X Hunter</h1>
             </div>
@@ -204,36 +204,36 @@
                         <ul id="anime" class="list-group list-group-horizontal">
                             <li>
                                 <form id="select1" method="POST" action="php/select.php">
-                                    <div class="card bg-dark text-center" id="card-anime-1"  data-bs-toggle="tooltip" title="Hunter X Hunter" onclick="document.querySelector('form#select1').submit()">
-                                        <input id="idAnime1" type="hidden" name="id" value="5">
+                                    <div class="card bg-dark text-center" id="card-anime-1"  data-bs-toggle="tooltip" title="Kill La Kill" onclick="document.querySelector('form#select1').submit()">
+                                        <input id="idAnime1" type="hidden" name="id" value="2">
                                         <input type="hidden" name="type" value="anime">
-                                        <img  class="card-img-top" id="card" src="https://lh3.googleusercontent.com/d/1MWcgEM-U663BF0YDzC5xXfcvPTpmI--q">
+                                        <img  class="card-img-top" id="card" src="https://lh3.googleusercontent.com/d/128MNvhzJFCZqqPPA-6mZgp766690dzHu">
                                         <div class="card-body" id="card-body-anime-1">
-                                            <p class="text-white" id="titleAnime1">Hunter X Hunter</p>
+                                            <p class="text-white" id="titleAnime1">Kill La Kill</p>
                                         </div>
                                     </div>
                                 </form>
                             </li>
                             <li>
                                 <form id="select2" method="POST" action="php/select.php">
-                                    <div class="card bg-dark text-center" id="card-anime-2" data-bs-toggle="tooltip" title="One Piece" onclick="document.querySelector('form#select2').submit()">
-                                        <input id="idAnime2" type="hidden" name="id" value="1">
+                                    <div class="card bg-dark text-center" id="card-anime-2" data-bs-toggle="tooltip" title="Chainsaw Man" onclick="document.querySelector('form#select2').submit()">
+                                        <input id="idAnime2" type="hidden" name="id" value="3">
                                         <input type="hidden" name="type" value="anime">
-                                        <img  class="card-img-top" id="card" src="https://lh3.googleusercontent.com/d/1XlIF18J9e0zp-kMrqM9pJvjxXDhZk25g">
+                                        <img  class="card-img-top" id="card" src="https://lh3.googleusercontent.com/d/1VXMMzg5rmMFVvehesjgYSET8_MOJbMKn">
                                         <div class="card-body" id="card-body-anime-2">
-                                            <p class="text-white" id="titleAnime2">One Piece</p>
+                                            <p class="text-white" id="titleAnime2">Chainsaw Man</p>
                                         </div>
                                     </div>
                                 </form>
                             </li>
                             <li>
                                 <form id="select3" method="POST" action="php/select.php">
-                                    <div class="card bg-dark text-center" id="card-anime-3"  data-bs-toggle="tooltip" title="Jojo's Bizarre Adventures" onclick="document.querySelector('form#select3').submit()">
-                                        <input id="idAnime3" type="hidden" name="id" value="6">
+                                    <div class="card bg-dark text-center" id="card-anime-3"  data-bs-toggle="tooltip" title="Suzumiya Haruhi No Yuutsu" onclick="document.querySelector('form#select3').submit()">
+                                        <input id="idAnime3" type="hidden" name="id" value="4">
                                         <input type="hidden" name="type" value="anime">
-                                        <img  class="card-img-top" id="card" src="https://lh3.googleusercontent.com/d/1D2_Mm_TRN5rlA5C_Mo1VKpCdZvzhXgcO">
+                                        <img  class="card-img-top" id="card" src="https://lh3.googleusercontent.com/d/1fqe3oF3q32oU9Sog0w3NCQPwfBg6p2e4">
                                         <div class="card-body" id="card-body-anime-3">
-                                            <p class="text-white" id="titleAnime3">Jojo's Bizarre Adventures</p>
+                                            <p class="text-white" id="titleAnime3">Suzumiya Haruhi No Yuutsu</p>
                                         </div>
                                     </div>
                                 </form>
@@ -243,7 +243,7 @@
                                     <div class="button" onclick="document.querySelector('form#nextAnime').submit()">
                                         <div class="card-body" id="card-button">
                                                 <input type="hidden" name="type" value="anime">
-                                                <input id="nextPageAnime" type="hidden" name="page" value="2">
+                                                <input id="nextPageAnime" type="hidden" name="page" value="1">
                                                 <button type="submit" id="card"><h1>></h1></button>
                                         </div>
                                     </div>
@@ -315,12 +315,12 @@
                     </div>
                     <div class="col-6">
                         <a href="https://instagram.com/limabrito_san?igshid=NGVhN2U2NjQ0Yg==">
-                            <img id="contact-1" class="contact-image" src="imagens/inst.png"> 
+                            <img id="contact-1" class="contact-image" src="images/inst.png"> 
                         </a>
                     </div>
                     <div class="col-6">
                         <a href="https://github.com/NicolasSlmetal">
-                            <img id="contact-2" class="contact-image" src="imagens/github.png"> 
+                            <img id="contact-2" class="contact-image" src="images/github.png"> 
                         </a>
                     </div>
                 </div>

@@ -6,7 +6,7 @@
         private $connection;
 
         public function __construct(){
-            $this->driver = new Driver("localhost:3000", "kuudere", "root", "password");
+            $this->driver = new Driver("localhost:3306", "kuudere", "root", "kuudereplay");
             $this->connection = $this->getDriver()->connect();
         }
 

@@ -5,12 +5,12 @@
     <title>Mangás</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../style/style.css"/>
-    <link rel="shortcut icon" type="imagex/png" href="../imagens/logo.ico">
+    <link rel="shortcut icon" type="imagex/png" href="../images/logo.ico">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </head>
 <body class="bg-dark">
     <div class="container-fluid" height="300px" style="background-color: black">
-        <img src="../imagens/logo.png" height="50px" width="100px" style="border-radius: 40px;  position: absolute;">
+        <img src="../images/logo.png" height="50px" width="100px" style="border-radius: 40px;  position: absolute;">
         <nav class="nav nav-pills justify-content-center" style="height: 52px;">
             <a class="nav-link" href="index.html">Home</a>
             <a class="nav-link" href="anime.php">Anime</a>

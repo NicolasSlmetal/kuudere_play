@@ -6,11 +6,11 @@
     <title>Animes</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../style/style.css"/>
-    <link rel="shortcut icon" type="imagex/png" href="../imagens/logo.ico">
+    <link rel="shortcut icon" type="imagex/png" href="../images/logo.ico">
 </head>
 <body class="bg-dark">
     <div class="container-fluid" height="300px" style="background-color: black;">
-        <img src="../imagens/logo.png" height="50px" width="100px" style="border-radius: 40px;  position: absolute;">
+        <img src="../images/logo.png" height="50px" width="100px" style="border-radius: 40px;  position: absolute;">
         <nav class="nav nav-pills justify-content-center" style="height: 52px;">
             <a class="nav-link" href="../index.html">Home</a>
             <a class="nav-link active" aria-current="page" href="#">Animes</a>
@@ -216,12 +216,12 @@
                     </div>
                     <div class="col-6">
                         <a href="https://instagram.com/limabrito_san?igshid=NGVhN2U2NjQ0Yg==">
-                            <img id="contact-1" class="contact-image" src="../imagens/inst.png"> 
+                            <img id="contact-1" class="contact-image" src="../images/inst.png"> 
                         </a>
                     </div>
                     <div class="col-6">
                         <a href="https://github.com/NicolasSlmetal">
-                            <img id="contact-2" class="contact-image" src="../imagens/github.png"> 
+                            <img id="contact-2" class="contact-image" src="../images/github.png"> 
                         </a>
                     </div>
                 </div>
