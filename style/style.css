@@ -273,8 +273,6 @@ div#thanks{
 a#thanks{
     margin: 10px;
     padding: 10px;
-    background-color: rgb(6, 110, 247)  ;
-    border-color:rgb(6, 110, 247)  ;
     text-decoration: white;
 }
 input#form{
