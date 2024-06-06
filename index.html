@@ -199,7 +199,8 @@
                 </form>
             </div>
             <div class="col-8">
-                    <div id="content">
+                    <div id="content-init">
+                        <nav aria-label="Page navigation example">
                         <h1 id="anime-content">Animes recomendados</h1>
                         <ul id="anime" class="list-group list-group-horizontal">
                             <li>
@@ -239,22 +240,58 @@
                                 </form>
                             </li>
                             <li>
-                                <form id="nextAnime" action="php/next.php" method="POST">
-                                    <div class="button" onclick="document.querySelector('form#nextAnime').submit()">
-                                        <div class="card-body" id="card-button">
-                                                <input type="hidden" name="type" value="anime">
-                                                <input id="nextPageAnime" type="hidden" name="page" value="1">
-                                                <button type="submit" id="card"><h1>></h1></button>
+                                <form id="select4" method="POST" action="php/select.php">
+                                    <div class="card bg-dark text-center" id="card-anime-4"  data-bs-toggle="tooltip" title="One Piece" onclick="document.querySelector('form#select4').submit()">
+                                        <input id="idAnime4" type="hidden" name="id" value="1">
+                                        <input type="hidden" name="type" value="anime">
+                                        <img  class="card-img-top" id="card" src="https://lh3.googleusercontent.com/d/1XlIF18J9e0zp-kMrqM9pJvjxXDhZk25g">
+                                        <div class="card-body" id="card-body-anime-4">
+                                            <p class="text-white" id="titleAnime4">One Piece</p>
+                                        </div>
+                                    </div>
+                                </form>
+                            </li>
+                            <li>
+                                <form id="select5" method="POST" action="php/select.php">
+                                    <div class="card bg-dark text-center" id="card-anime-5"  data-bs-toggle="tooltip" title="Hunter X Hunter" onclick="document.querySelector('form#select5').submit()">
+                                        <input id="idAnime3" type="hidden" name="id" value="5">
+                                        <input type="hidden" name="type" value="anime">
+                                        <img  class="card-img-top" id="card" src="https://lh3.googleusercontent.com/d/1MWcgEM-U663BF0YDzC5xXfcvPTpmI--q">
+                                        <div class="card-body" id="card-body-anime-5">
+                                            <p class="text-white" id="titleAnime5">Hunter X Hunter</p>
+                                        </div>
+                                    </div>
+                                </form>
+                            </li>
+                            <li>
+                                <form id="select6" method="POST" action="php/select.php">
+                                    <div class="card bg-dark text-center" id="card-anime-6"  data-bs-toggle="tooltip" title="Jojo's Bizarre Adventures" onclick="document.querySelector('form#select6').submit()">
+                                        <input id="idAnime3" type="hidden" name="id" value="6">
+                                        <input type="hidden" name="type" value="anime">
+                                        <img  class="card-img-top" id="card" src="https://lh3.googleusercontent.com/d/1D2_Mm_TRN5rlA5C_Mo1VKpCdZvzhXgcO">
+                                        <div class="card-body" id="card-body-anime-6">
+                                            <p class="text-white" id="titleAnime6">Jojo's Bizarre Adventures</p>
                                         </div>
                                     </div>
                                 </form>
                             </li>
                         </ul>
+                        <br>
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center">
+                                <li id="prev-anime" class="page-item disabled">
+                                    <a class="page-link bg-dark" href="#div#anime" onclick="pageAnime('previous')">Anterior</a>
+                                  </li>
+                                    <li id="next-anime" class="page-item">
+                                        <a class="page-link bg-dark" href="#div#anime" onclick="pageAnime('next')">Próximo</a>
+                                      </li>
+                            </ul>
+                        </nav>
                         <h1 id="manga-content">Mangás recomendados</h1>
                         <ul id="manga" class="list-group list-group-horizontal" style="list-style: none; overflow: hidden;">
                             <li>
-                                <form id="select4" method="POST" action="php/select.php">
-                                    <div class="card bg-dark text-center" id="card-manga-1" data-bs-toggle="tooltip" title="Mangá - One Piece" onclick="document.querySelector('form#select4').submit()">
+                                <form id="select7" method="POST" action="php/select.php">
+                                    <div class="card bg-dark text-center" id="card-manga-1" data-bs-toggle="tooltip" title="Mangá - One Piece" onclick="document.querySelector('form#select7').submit()">
                                         <input id="idManga1" type="hidden" name="id" value="1">
                                         <input type="hidden" name="type" value="manga">
                                         <img  class="card-img-top" id="card" src="https://lh3.googleusercontent.com/d/1DhrgILgsg91uVc8s4hWz2lLS_V7qlxwO">
@@ -265,8 +302,8 @@
                                 </form>
                             </li>
                             <li>
-                                <form id="select5" method="POST" action="php/select.php">
-                                    <div class="card bg-dark text-center" id="card-manga-2" data-bs-toggle="tooltip" title="One Punch Man" onclick="document.querySelector('form#select5').submit()">
+                                <form id="select8" method="POST" action="php/select.php">
+                                    <div class="card bg-dark text-center" id="card-manga-2" data-bs-toggle="tooltip" title="One Punch Man" onclick="document.querySelector('form#select8').submit()">
                                         <input id="idManga2" type="hidden" name="id" value="2">
                                         <input type="hidden" name="type" value="manga">
                                         <img  class="card-img-top" id="card" src="https://lh3.googleusercontent.com/d/1Y1klRwQLR9RKNmP-THsxagnmkarfAfzT">
@@ -277,8 +314,8 @@
                                 </form>
                             </li>
                             <li>
-                                <form id="select6" method="POST" action="php/select.php">
-                                    <div class="card bg-dark text-center" id="card-manga-3" data-bs-toggle="tooltip" title="Mangá - Hunter X Hunter" style="margin: 4px; border-radius: 12px; cursor:pointer;" onclick="document.querySelector('form#select6').submit()">
+                                <form id="select9" method="POST" action="php/select.php">
+                                    <div class="card bg-dark text-center" id="card-manga-3" data-bs-toggle="tooltip" title="Mangá - Hunter X Hunter" style="margin: 4px; border-radius: 12px; cursor:pointer;" onclick="document.querySelector('form#select9').submit()">
                                         <span>
                                         <input id="idManga3" type="hidden" name="id" value="3">
                                         <input type="hidden" name="type" value="manga">
@@ -290,17 +327,57 @@
                                 </form>
                             </li>
                             <li>
-                                <form id="nextManga" action="php/next.php" method="POST">
-                                    <div class="button" onclick="document.querySelector('form#nextManga').submit()">
-                                        <div class="card-body" id="card-button">
-                                                <input type="hidden" name="type" value="manga">
-                                                <input id="nextPageManga" type="hidden" name="page" value="1">
-                                                <button type="submit" id="card"><h1>></h1></button>
+                                <form id="select10" method="POST" action="php/select.php">
+                                    <div class="card bg-dark text-center" id="card-manga-4" data-bs-toggle="tooltip" title="Attack On Titan" style="margin: 4px; border-radius: 12px; cursor:pointer;" onclick="document.querySelector('form#select10').submit()">
+                                        <span>
+                                        <input id="idManga4" type="hidden" name="id" value="4">
+                                        <input type="hidden" name="type" value="manga">
+                                        <img  class="card-img-top" id="card" src="https://lh3.googleusercontent.com/d/1NgRPi6pZLG3q0cqFlchdzxeJwh062SCV" style="width: 210px; height: 300px;">
+                                        <div class="card-body" id="card-body-manga-4">
+                                            <p class="text-white" id="titleManga4">Attack On Titan</p>
+                                        </div>
+                                    </div>
+                                </form>
+                            </li>
+                            <li>
+                                <form id="select11" method="POST" action="php/select.php">
+                                    <div class="card bg-dark text-center" id="card-manga-5" data-bs-toggle="tooltip" title="Tokyo Ghoul" style="margin: 4px; border-radius: 12px; cursor:pointer;" onclick="document.querySelector('form#select11').submit()">
+                                        <span>
+                                        <input id="idManga5" type="hidden" name="id" value="6">
+                                        <input type="hidden" name="type" value="manga">
+                                        <img  class="card-img-top" id="card" src="https://lh3.googleusercontent.com/d/1KhfvSYD_oXbWwxU4a_AmdeIFp3IbAKqt" style="width: 210px; height: 300px;">
+                                        <div class="card-body" id="card-body-manga-5">
+                                            <p class="text-white" id="titleManga5">Tokyo Ghoul</p>
+                                        </div>
+                                    </div>
+                                </form>
+                            </li>
+                            <li>
+                                <form id="select12" method="POST" action="php/select.php">
+                                    <div class="card bg-dark text-center" id="card-manga-6" data-bs-toggle="tooltip" title="Another" style="margin: 4px; border-radius: 12px; cursor:pointer;" onclick="document.querySelector('form#select12').submit()">
+                                        <span>
+                                        <input id="idManga6" type="hidden" name="id" value="5">
+                                        <input type="hidden" name="type" value="manga">
+                                        <img  class="card-img-top" id="card" src="https://lh3.googleusercontent.com/d/1pHSH-1rEFPbY9QN2X1JlG-OJCQZBDq1P" style="width: 210px; height: 300px;">
+                                        <div class="card-body" id="card-body-manga-6">
+                                            <p class="text-white" id="titleManga6">Another</p>
                                         </div>
                                     </div>
                                 </form>
                             </li>
                         </ul>
+                        <br>
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center">
+                                <li id="prev-manga" class="page-item disabled">
+                                    <a class="page-link bg-dark" href="#div#manga" onclick="pageManga('previous')">Anterior</a>
+                                  </li>
+                                    <li id="next-manga" class="page-item">
+                                        <a class="page-link bg-dark" href="#div#manga" onclick="pageManga('next')">Próximo</a>
+                                      </li>
+                            </ul>
+                        </nav>
+                        <br>
                 </div>
             </div>
         </div>
@@ -315,12 +392,12 @@
                     </div>
                     <div class="col-6">
                         <a href="https://instagram.com/limabrito_san?igshid=NGVhN2U2NjQ0Yg==">
-                            <img id="contact-1" class="contact-image" src="images/inst.png"> 
+                            <img id="contact-1" class="contact-image" src="imagens/inst.png"> 
                         </a>
                     </div>
                     <div class="col-6">
                         <a href="https://github.com/NicolasSlmetal">
-                            <img id="contact-2" class="contact-image" src="images/github.png"> 
+                            <img id="contact-2" class="contact-image" src="imagens/github.png"> 
                         </a>
                     </div>
                 </div>
@@ -339,7 +416,13 @@
     <script src="scripts/search.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/js/bootstrap.min.js"></script>
+    <script src="scripts/page.js"></script>
+    <script>
         var type = "index"
+        var radioYearLastCheck = null
+        
+
+        
     </script>
 </body>
 </html>
